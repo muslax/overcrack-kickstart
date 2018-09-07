@@ -1,6 +1,6 @@
 # Overcrack Kickstarter
 
-Overcrack Kickstarter consists of 23 example posts and script to test or kickstart the [Overcrack](https://github.com/muslax/overcrack) static blogging engine.
+Overcrack Kickstarter consists of 23 example posts and script for testing or kickstarting the [Overcrack](https://github.com/muslax/overcrack) static blogging engine.
 
 WARNING: Only use this for pristine Overcrack installation. Before running the kickstart script (`kickstart.sh`) make sure the `DocumentRoot` of the Apache web server is set to `www` folder in the Overcrack directory.
 
