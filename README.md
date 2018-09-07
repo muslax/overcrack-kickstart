@@ -4,11 +4,13 @@ WARNING: Only use this for the pristine Overcrack installation. Before running t
 
 1. Move/copy the `example-posts` folder to Overcrack folder:
 
+````
   [OVERCRACK-FOLDER]
     api-www
     engine
     example-posts
     example-templates
     www
+````
 
 Kickstart Overcrack blog with example posts.
