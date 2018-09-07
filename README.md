@@ -2,6 +2,10 @@
 
 WARNING: Only use this for the pristine Overcrack installation. Before running the kickstart script (`kickstart.sh`) make sure the `DocumentRoot` of the Apache web server is set to `www` folder in the Overcrack directory.
 
+<br><br><br>
+
+## The steps
+
 1. Move/copy the `example-posts` folder, `kickstart.sh` and `remove-example-posts.sh` to Overcrack folder:
 
 ````
@@ -28,4 +32,6 @@ WARNING: Only use this for the pristine Overcrack installation. Before running t
 4. Create `crontab` using statement provided by the script.
 
 5. Pray for a minute before checking your blog in browser.
+
+## Removing example posts
 
