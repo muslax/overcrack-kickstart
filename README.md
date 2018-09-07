@@ -2,6 +2,8 @@
 
 WARNING: Only use this for the pristine Overcrack installation. Before running the kickstart script (`kickstart.sh`) make sure the `DocumentRoot` of the Apache web server is set to `www` folder in the Overcrack directory.
 
+The `kickstart.sh` script creates `blog` folder (and its sub folders) and assume it as Overcrack's source folder. If you intend to use different folder name, or folder outside Overcrack directory, you still use this for testing purpose and change the paths configs in `config.php` later.
+
 <br><br><br>
 
 ## The steps
@@ -9,16 +11,16 @@ WARNING: Only use this for the pristine Overcrack installation. Before running t
 1. Move/copy the `example-posts` folder, `kickstart.sh` and `remove-example-posts.sh` to Overcrack folder:
 
 ````
-  [OVERCRACK-FOLDER]
-    api-www
-    engine
-    example-posts
-    example-templates
-    www
-    ...
-    kickstart.sh
-    remove-example-posts.sh
-    ...
+[OVERCRACK-FOLDER]
+  api-www
+  engine
+  example-posts
+  example-templates
+  www
+  ...
+  kickstart.sh
+  remove-example-posts.sh
+  ...
 ````
    
 2. From inside the Overcrack folder, run the kickstart script:
@@ -31,7 +33,15 @@ WARNING: Only use this for the pristine Overcrack installation. Before running t
    
 4. Create `crontab` using statement provided by the script.
 
-5. Pray for a minute before checking your blog in browser.
+5. Pray for a minute before checking your blog in the browser.
 
 ## Removing example posts
+
+When you don't need the example posts anymore, use `remove-example-posts.sh` script to clean-up your blog.
+
+````
+./remove-example-posts.sh`
+````
+
+This script deletes only the posts, but not the pictures in `media` folder.
 
