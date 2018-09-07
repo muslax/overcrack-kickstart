@@ -42,7 +42,7 @@ __WARNING__: Only use this over pristine Overcrack installation. Before running 
 When you don't need the example posts anymore, use `remove-example-posts.sh` script to clean-up your blog.
 
 ````
-./remove-example-posts.sh`
+./remove-example-posts.sh
 ````
 
 This script deletes only the posts, but not the pictures in `media` folder.
