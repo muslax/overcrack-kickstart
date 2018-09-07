@@ -33,7 +33,7 @@ The `kickstart.sh` script creates `blog` folder (and its sub folders) and assume
    
 4. Create `crontab` using statement provided by the script.
 
-5. Pray for a minute before checking your blog in the browser.
+5. If you wish, pray for a minute before checking your blog in the browser.
 
 ## Removing example posts
 
@@ -45,3 +45,4 @@ When you don't need the example posts anymore, use `remove-example-posts.sh` scr
 
 This script deletes only the posts, but not the pictures in `media` folder.
 
+Happy Overcracking.
