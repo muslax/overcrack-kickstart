@@ -10,14 +10,14 @@ Publish-now
 
 Fitur **Show Markdown** berlaku dan hanya berlaku untuk halaman _permalink_, yaitu halaman blog yang menampilkan postingan tunggal, jadi bukan pada halaman beranda (_frontpage_) atau halaman arsip. Dalam Overcrack halaman _permalink_ dicirikan dengan format URL (yaitu alamat yang tertulis di baris alamat atau _address bar_) yang memuat secara berurutan tahun, bulan, tanggal dan judul postingan, misalnya seperti ini: `/2017/02/28/judul-artikel`.
 
-Memanggil fitur **Show Markdown** dilakukan dengan cara menambahkan **`/markdown`** di belakan alamat yang tercetak di _address bar_. Sebagai contoh bila _address bar_ menampilkan alamat:
+Memanggil fitur **Show Markdown** dilakukan dengan cara menambahkan **`=markdown`** di belakan alamat yang tercetak di _address bar_. Sebagai contoh bila _address bar_ menampilkan alamat:
 
 	http://overcrack.web.id/2017/08/22/show-markdown-source
 
 maka, **Show Markdown** diaktifkan dengan mengubah URL menjadi:
 
 
-	http://overcrack.web.id/2017/08/22/show-markdown-source/markdown
+	http://overcrack.web.id/2017/08/22/show-markdown-source=markdown
 
 Mudah. Dan lebih mudah lagi karena template _default_ Overcrack menyediakan _shortcut_ **`Ctrl-M`** untuk memanggil fitur ini. 
 
@@ -31,7 +31,7 @@ Berbeda dengan CMS rumit seperti Wordpress dan lain-lain yang menyimpan konten a
 **Show-Markdown** mengandalkan pengaturan akses direktori yang disediakan oleh server web Apache melalui file `.htaccess` di folder `web root`. Berikut adalah potongan file `.htaccess` yang mengatur itu:
 
 	# RewriteCond for serving Markdown resource
-	RewriteCond %{REQUEST_URI} /([0-9]{4})/([0-9]{2})/([0-9]{2})/(.*)/markdown$
+	RewriteCond %{REQUEST_URI} /([0-9]{4})/([0-9]{2})/([0-9]{2})/(.*)=markdown$
 	RewriteRule .* show-markdown.php
 
 Dalam Bahasa Indonesia kode tersebut kurang lebih bermakna "Bila pengguna meminta _path_ dengan pola `/yyyy/mm/dd/judul-artikel/markdown` maka serahkan urusan itu pada skrip `show-markdown.php`." Skrip inilah yang kemudian bertanggung jawab menemukan kode sumber artikel dan kemudian menyajikannya ke browser.
